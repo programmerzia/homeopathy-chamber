@@ -1,0 +1,86 @@
+{
+  "expo": {
+    "name": "চেম্বার",
+    "slug": "homeopathy-chamber",
+    "scheme": "chamber",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "backgroundColor": "#F5F2EA",
+    "experiments": {
+      "typedRoutes": true
+    },
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.homeopathy.chamber"
+    },
+    "android": {
+      "package": "com.homeopathy.chamber",
+      "adaptiveIcon": {
+        "backgroundColor": "#24493D",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": false,
+      "softwareKeyboardLayoutMode": "resize"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-sqlite",
+        {}
+      ],
+      "expo-font",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/splash-icon.png",
+          "imageWidth": 160,
+          "backgroundColor": "#F5F2EA"
+        }
+      ],
+      "expo-image",
+      "expo-sharing",
+      [
+        "expo-secure-store",
+        {
+          "faceIDPermission": false
+        }
+      ],
+      "@react-native-community/datetimepicker",
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "খাতার ছবি তুলতে ক্যামেরা লাগবে",
+          "recordAudioAndroid": false
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "গ্যালারি থেকে খাতার ছবি নিতে অনুমতি লাগবে"
+        }
+      ],
+      [
+        "expo-speech-recognition",
+        {
+          "microphonePermission": "মুখে বলে লিখতে মাইক্রোফোন লাগবে",
+          "speechRecognitionPermission": "মুখে বলে লিখতে অনুমতি লাগবে"
+        }
+      ],
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "usesCleartextTraffic": true
+          }
+        }
+      ]
+    ]
+  }
+}

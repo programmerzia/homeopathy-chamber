@@ -1,0 +1,19 @@
+name: chamber
+
+services:
+  backend:
+    build: .
+    image: chamber-backend
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      NODE_ENV: production
+      PORT: 8787
+      DATA_DIR: /data
+    ports:
+      - "8787:8787"
+    volumes:
+      - chamber-data:/data
+
+volumes:
+  chamber-data:

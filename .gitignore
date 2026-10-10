@@ -1,0 +1,6 @@
+# secrets and local config
+.env
+
+# build outputs
+dist/
+node_modules/
